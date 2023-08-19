@@ -10,7 +10,7 @@ s = socket(AF_INET, SOCK_STREAM)
 s.connect((HOST, PORT))
 
 while True:
-    operation = input("Enter operation (ADD/SUB): ")
+    operation = input("Enter operation (ADD/SUB/MULT/DIV): ")
     if operation == "exit":
         break
 
