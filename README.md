@@ -1,10 +1,46 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pmCXrCMx)
-# ClientServerBasics (2.0)
-Starter code for the basic client-server assignment
+# Calculadora Simples Cliente-Servidor
 
+Este é um aplicativo básico cliente-servidor construído em Python que simula uma calculadora simples. O cliente envia solicitações para o servidor para realizar várias operações matemáticas, incluindo adição, subtração, multiplicação e divisão. O servidor processa as solicitações e envia os resultados de volta para o cliente.
 
-Este template corresponde ao exemplo da Fig. 2.3 do livro. O exercício consiste em acrescentar funcionalidade ao servidor para torná-lo mais útil. Essa funcionalidade deve ser acessível aos clientes. Por exemplo, o servidor pode ser uma espécie de calculadora remota. O cliente passa dois valores numéricos, juntamente com o nome de uma operação (ex.: add, subtract, multiply, divide) e o servidor executa a operação respectiva e retorna seu resultado para o cliente. Você pode implementar outro tipo de servidor (diferente da calculadora). O imporante é que ele ofereça pelo menos três operações diferentes que os clientes podem utilizar remotamente, passando dados para serem processados e recebendo o resultado desse processamento como resposta.
+## Como Funciona
 
-Tarefa individual.
+1. O cliente e o servidor se comunicam por meio de sockets, usando um protocolo predefinido.
+2. O cliente envia uma solicitação contendo a operação desejada e os operandos para o servidor.
+3. O servidor recebe a solicitação, realiza a operação solicitada e envia o resultado de volta para o cliente.
+4. O cliente exibe o resultado.
 
-Incluir um Readme descritivo do sistema implementado.
+## Operações Suportadas
+
+A calculadora suporta as seguintes operações:
+
+- Adição (+)
+- Subtração (-)
+- Multiplicação (*)
+- Divisão (/)
+
+## Uso
+
+1. Inicie o servidor executando `server.py`. e em outro terminal execute `client.py`
+   python server.py
+   python client.py
+2. O cliente solicita que você escolha uma operação e insira dois números.
+3. O cliente envia a solicitação para o servidor, que a processa e envia o resultado de volta.
+4. O cliente exibe o resultado.
+
+## Exemplo
+  Suponha que você queira realizar o seguinte cálculo:
+
+  Operação: Adição
+  Primeiro número: 10
+  Segundo número: 5
+  Resultado esperado: 10 + 5 = 15
+
+  1. Execute o cliente e escolha "ADD" como operação.
+  2. Insira "10" como o primeiro número e "5" como o segundo número.
+  3. O cliente exibe o resultado "Resultado: 15".
+
+## Notas 
+
+  1. O servidor lida com solicitações inválidas de forma adequada e envia uma resposta apropriada.
+  2. A divisão por zero não é permitida, e o servidor responde com uma mensagem de erro se isso for tentado.
+  3. Este projeto é uma ilustração básica e não possui recursos como tratamento de erros, validação de entrada e considerações de segurança. É recomendado para fins educacionais e como ponto de partida para aplicativos mais complexos.
