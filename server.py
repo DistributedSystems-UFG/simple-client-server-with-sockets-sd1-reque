@@ -14,6 +14,13 @@ def handle_request(request):
         return str(num1 + num2)
     elif operation == "SUB":
         return str(num1 - num2)
+    elif operation == "MULT":
+        return str(num1 * num2)
+    elif operation == "DIV":
+        if num2 == 0:
+            return "Não se pode dividir por zero"
+        else:
+            return str(num1 / num2)
     else:
         return "Unknown operation"
 
